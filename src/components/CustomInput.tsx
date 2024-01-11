@@ -26,13 +26,14 @@ const CustomInput: FC = () => {
   return (
     <form onSubmit={onSubmit} className="flex justify-center items-center w-full">
       <input
+        style={{ fontFamily: "Rubik" }}
         onChange={handleInputChange}
         value={inputValue}
-        className="p-3 rounded-ss-lg rounded-s-lg focus:outline-none w-full md:w-4/12"
+        className="p-3 rounded-ss-xl rounded-s-xl focus:outline-none w-full md:w-4/12"
         type="text"
         placeholder="Search for any IP address domain"
       />
-      <button type="submit" className="bg-black p-3 rounded-e-lg rounded-ee-lg text-white">
+      <button type="submit" className="bg-black p-3 rounded-e-xl rounded-ee-xl text-white">
         <img className="w-2 h-2 m-2" src="/svg/icon-arrow.svg" alt="" />
       </button>
     </form>
