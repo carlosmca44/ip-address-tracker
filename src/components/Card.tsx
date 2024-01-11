@@ -16,10 +16,10 @@ const Card: FC<CardProps> = () => {
 
 	const loadData = async () => {
 		try {
-			const response = await fetch(import.meta.env.PUBLIC_IP_API_URL + import.meta.env.PUBLIC_IP_API_KEY)
-			const ipInfo: IpApi = await response.json()
-			changeIpAddress(ipInfo)
-			console.log(ipInfo)
+			const response = await fetch(
+				import.meta.env.PUBLIC_IP_API_URL + import.meta.env.PUBLIC_IP_API_KEY
+			)
+			await response.json().then(res => changeIpAddress(res as IpApi))
 		} catch (error) {
 			console.log(error)
 		}
